@@ -25,9 +25,12 @@ model = Sequential()
 # 1st approach
 # add each layer to the model 77.99% accuracy
 model.add(Dense(32, input_dim=8, activation='relu')) # output matrix size (*, 32)
+# model.add(Dense(28, activation='relu'))
 model.add(Dense(24, activation='relu'))
+# model.add(Dense(16, activation='relu')) #plus
 model.add(Dense(12, activation='relu'))
-model.add(Dense(6,  activation='relu'))
+model.add(Dense(8, activation = 'relu'))
+# model.add(Dense(6,  activation='relu')) #plus
 model.add(Dense(1, activation='sigmoid'))
 
 #2nd approach 81.12% accuracy
@@ -36,12 +39,9 @@ model.add(Dense(1, activation='sigmoid'))
 # model.add(Dense(1, activation='sigmoid'))
 
 # 3rd approch
-# def GRNN(hidden_size, num_labels, num_words=100, embed_length=32, max_input_length=50):
-#
-#     model = Sequential()
-#     model.add(Embedding(num_words, embed_length, input_length=max_input_length))
-#     model.add(Grounded_GRU(hidden_size, num_labels))
-#     model.add(Grounded_Dense(num_labels, activation='sigmoid'))
+# model.add(Dense(32, input_dim=8, activation='relu')) # output matrix size (*, 32)
+# model.add(Dense(16, activation='relu'))
+# model.add(Dense(1, activation='sigmoid'))
 
 
 # Compile model
